@@ -1,0 +1,424 @@
+{
+  "jobs": [
+    {
+      "name": "bqDataset",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDataset-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDataset",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDataset/process_bqDataset_${date}.json"
+    },
+    {
+      "name": "criteo",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-criteo-importer-starter",
+      "stepFunctionName": "${environment}ImporterCriteo",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/criteo/process_criteo_${date}.json"
+    },
+    {
+      "name": "adwordsAudience",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adwordsAudience-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdwordsAudience",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adwordsAudience/process_adwordsAudience_${date}.json"
+    },
+    {
+      "name": "awin",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-awin-importer-starter",
+      "stepFunctionName": "${environment}ImporterAwin",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/awin/process_awin_${date}.json"
+    },
+    {
+      "name": "bingAdsConversion",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bingAdsConversion-importer-starter",
+      "stepFunctionName": "${environment}ImporterBingAdsConversion",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bingAdsConversion/process_bingAdsConversion_${date}.json"
+    },
+    {
+      "name": "bqArticlePDPVisits",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqArticlePDPVisits-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqArticlePDPVisits",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqArticlePDPVisits/process_bqArticlePDPVisits_${date}.json"
+    },
+    {
+      "name": "bqEvents",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqEvents-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqEvents",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqEvents/process_bqEvents_${date}.json"
+    },
+    {
+      "name": "contactCenter",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-contactCenter-importer-starter",
+      "stepFunctionName": "${environment}ImporterContactCenter",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/contactCenter/process_contactCenter_${date}.json"
+    },
+    {
+      "name": "googleAnalyticsIntProm",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-googleAnalyticsIntProm-importer-starter",
+      "stepFunctionName": "${environment}ImporterGoogleAnalyticsIntProm",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/googleAnalyticsIntProm/process_googleAnalyticsIntProm_${date}.json"
+    },
+    {
+      "name": "bqAllSessionsApp",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqAllSessionsApp-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqAllSessionsApp",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqAllSessionsApp/process_bqAllSessionsApp_${date}.json"
+    },
+    {
+      "name": "bqArticleRanking",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqArticleRanking-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqArticleRanking",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqArticleRanking/process_bqArticleRanking_${date}.json"
+    },
+    {
+      "name": "forecastReorder",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-forecastReorder-importer-starter",
+      "stepFunctionName": "${environment}ImporterForecastReorder",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/forecastReorder/process_forecastReorder_${date}.json"
+    },
+    {
+      "name": "ingenious",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-ingenious-importer-starter",
+      "stepFunctionName": "${environment}ImporterIngenious",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/ingenious/process_ingenious_${date}.json"
+    },
+    {
+      "name": "bqAllTransactions",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqAllTransactions-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqAllTransactions",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqAllTransactions/process_bqAllTransactions_${date}.json"
+    },
+    {
+      "name": "evintBreakTimes",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintBreakTimes-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintBreakTimes",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintBreakTimes/process_evintBreakTimes_${date}.json"
+    },
+    {
+      "name": "adjust",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adjust-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdjust",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adjust/process_adjust_${date}.json"
+    },
+    {
+      "name": "evintEmployees",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintEmployees-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintEmployees",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintEmployees/process_evintEmployees_${date}.json"
+    },
+    {
+      "name": "bqDiscSearchFilter",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDiscSearchFilter-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDiscSearchFilter",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDiscSearchFilter/process_bqDiscSearchFilter_${date}.json"
+    },
+    {
+      "name": "googleAnalyticsLanding",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-googleAnalyticsLanding-importer-starter",
+      "stepFunctionName": "${environment}ImporterGoogleAnalyticsLanding",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/googleAnalyticsLanding/process_googleAnalyticsLanding_${date}.json"
+    },
+    {
+      "name": "facebook",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-facebook-importer-starter",
+      "stepFunctionName": "${environment}ImporterFacebook",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/facebook/process_facebook_${date}.json"
+    },
+    {
+      "name": "soquero",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-soquero-importer-starter",
+      "stepFunctionName": "${environment}ImporterSoquero",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/soquero/process_soquero_${date}.json"
+    },
+    {
+      "name": "bqCompetitorPrice",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqCompetitorPrice-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqCompetitorPrice",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqCompetitorPrice/process_bqCompetitorPrice_${date}.json"
+    },
+    {
+      "name": "bqAllSessionsWS",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqAllSessionsWS-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqAllSessionsWS",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqAllSessionsWS/process_bqAllSessionsWS_${date}.json"
+    },
+    {
+      "name": "bqDiscSearchFullText",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDiscSearchFullText-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDiscSearchFullText",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDiscSearchFullText/process_bqDiscSearchFullText_${date}.json"
+    },
+    {
+      "name": "bingAdsKeyword",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bingAdsKeyword-importer-starter",
+      "stepFunctionName": "${environment}ImporterBingAdsKeyword",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bingAdsKeyword/process_bingAdsKeyword_${date}.json"
+    },
+    {
+      "name": "adwordsKeyword",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adwordsKeyword-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdwordsKeyword",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adwordsKeyword/process_adwordsKeyword_${date}.json"
+    },
+    {
+      "name": "bqWSNavigationClick",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqWSNavigationClick-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqWSNavigationClick",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqWSNavigationClick/process_bqWSNavigationClick_${date}.json"
+    },
+    {
+      "name": "payback",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-payback-importer-starter",
+      "stepFunctionName": "${environment}ImporterPayback",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/payback/process_payback_${date}.json"
+    },
+    {
+      "name": "evintChargeRates",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintChargeRates-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintChargeRates",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintChargeRates/process_evintChargeRates_${date}.json"
+    },
+    {
+      "name": "evintProjectTimes",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintProjectTimes-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintProjectTimes",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintProjectTimes/process_evintProjectTimes_${date}.json"
+    },
+    {
+      "name": "ekomi",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-ekomi-importer-starter",
+      "stepFunctionName": "${environment}ImporterEkomi",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/ekomi/process_ekomi_${date}.json"
+    },
+    {
+      "name": "adwordsCampaign",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adwordsCampaign-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdwordsCampaign",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adwordsCampaign/process_adwordsCampaign_${date}.json"
+    },
+    {
+      "name": "evintDailyWorkingTimes",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintDailyWorkingTimes-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintDailyWorkingTimes",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintDailyWorkingTimes/process_evintDailyWorkingTimes_${date}.json"
+    },
+    {
+      "name": "bingAdsCampaign",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bingAdsCampaign-importer-starter",
+      "stepFunctionName": "${environment}ImporterBingAdsCampaign",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bingAdsCampaign/process_bingAdsCampaign_${date}.json"
+    },
+    {
+      "name": "evintChargeRatesMain",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintChargeRatesMain-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintChargeRatesMain",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintChargeRatesMain/process_evintChargeRatesMain_${date}.json"
+    },
+    {
+      "name": "evintShiftSchedule",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintShiftSchedule-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintShiftSchedule",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintShiftSchedule/process_evintShiftSchedule_${date}.json"
+    },
+    {
+      "name": "adwordsGeo",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adwordsGeo-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdwordsGeo",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adwordsGeo/process_adwordsGeo_${date}.json"
+    },
+    {
+      "name": "surveyGizmo",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-surveyGizmo-importer-starter",
+      "stepFunctionName": "${environment}ImporterSurveyGizmo",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/surveyGizmo/process_surveyGizmo_${date}.json"
+    },
+    {
+      "name": "googleAnalyticsPageUrl",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-googleAnalyticsPageUrl-importer-starter",
+      "stepFunctionName": "${environment}ImporterGoogleAnalyticsPageUrl",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/googleAnalyticsPageUrl/process_googleAnalyticsPageUrl_${date}.json"
+    },
+    {
+      "name": "evintAbsences",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintAbsences-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintAbsences",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintAbsences/process_evintAbsences_${date}.json"
+    },
+    {
+      "name": "adwordsAdgroup",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adwordsAdgroup-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdwordsAdgroup",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adwordsAdgroup/process_adwordsAdgroup_${date}.json"
+    },
+    {
+      "name": "bqDiscSearchAutoSug",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDiscSearchAutoSug-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDiscSearchAutoSug",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDiscSearchAutoSug/process_bqDiscSearchAutoSug_${date}.json"
+    },
+    {
+      "name": "googleSheets",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-googleSheets-importer-starter",
+      "stepFunctionName": "${environment}ImporterGoogleSheets",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/googleSheets/process_googleSheets_${date}.json"
+    },
+    {
+      "name": "priceApi",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-priceApi-importer-starter",
+      "stepFunctionName": "${environment}ImporterPriceApi",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/priceApi/process_priceApi_${date}.json"
+    },
+    {
+      "name": "bqDiscSearchPDP",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDiscSearchPDP-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDiscSearchPDP",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDiscSearchPDP/process_bqDiscSearchPDP_${date}.json"
+    },
+    {
+      "name": "bqDiscSearchImpresion",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDiscSearchImpresion-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDiscSearchImpresion",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDiscSearchImpresion/process_bqDiscSearchImpresion_${date}.json"
+    },
+    {
+      "name": "DedupCatalog",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupCatalog-starter",
+      "stepFunctionName": "${environment}DedupDedupCatalog",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupCatalog/process_DedupCatalog_${date}.json"
+    },
+    {
+      "name": "DedupStockReservation",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupStockReservation-starter",
+      "stepFunctionName": "${environment}DedupDedupStockReservation",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupStockReservation/process_DedupStockReservation_${date}.json"
+    },
+    {
+      "name": "DedupCategory",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupCategory-starter",
+      "stepFunctionName": "${environment}DedupDedupCategory",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupCategory/process_DedupCategory_${date}.json"
+    },
+    {
+      "name": "DedupJarvisCampaign",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupJarvisCampaign-starter",
+      "stepFunctionName": "${environment}DedupDedupJarvisCampaign",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupJarvisCampaign/process_DedupJarvisCampaign_${date}.json"
+    },
+    {
+      "name": "DedupContentTree",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupContentTree-starter",
+      "stepFunctionName": "${environment}DedupDedupContentTree",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupContentTree/process_DedupContentTree_${date}.json"
+    },
+    {
+      "name": "DedupCustomer",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupCustomer-starter",
+      "stepFunctionName": "${environment}DedupDedupCustomer",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupCustomer/process_DedupCustomer_${date}.json"
+    },
+    {
+      "name": "DedupReclamation",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupReclamation-starter",
+      "stepFunctionName": "${environment}DedupDedupReclamation",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupReclamation/process_DedupReclamation_${date}.json"
+    },
+    {
+      "name": "DedupTechKpi",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupTechKpi-starter",
+      "stepFunctionName": "${environment}DedupDedupTechKpi",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupTechKpi/process_DedupTechKpi_${date}.json"
+    },
+    {
+      "name": "DedupStockStock",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupStockStock-starter",
+      "stepFunctionName": "${environment}DedupDedupStockStock",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupStockStock/process_DedupStockStock_${date}.json"
+    },
+    {
+      "name": "DedupNotification",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupNotification-starter",
+      "stepFunctionName": "${environment}DedupDedupNotification",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupNotification/process_DedupNotification_${date}.json"
+    },
+    {
+      "name": "DedupOrderV3",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupOrderV3-starter",
+      "stepFunctionName": "${environment}DedupDedupOrderV3",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupOrderV3/process_DedupOrderV3_${date}.json"
+    },
+    {
+      "name": "DedupStockLocation",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupStockLocation-starter",
+      "stepFunctionName": "${environment}DedupDedupStockLocation",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupStockLocation/process_DedupStockLocation_${date}.json"
+    },
+    {
+      "name": "DedupCatalogRerun",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupCatalogRerun-starter",
+      "stepFunctionName": "${environment}DedupDedupCatalogRerun",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupCatalogRerun/process_DedupCatalogRerun_${date}.json"
+    },
+    {
+      "name": "DedupSubscription",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupSubscription-starter",
+      "stepFunctionName": "${environment}DedupDedupSubscription",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupSubscription/process_DedupSubscription_${date}.json"
+    }
+  ]
+}

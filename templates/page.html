@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HTML Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+          <script>
+              $(document).ready(function(){
+                  $("#livebox").on("input",function(e){
+                      $("#datalist").empty();
+                      $.ajax({
+                          method:"post",
+                          url:"/livesearch",
+                          data:{text:$("#livebox").val()},
+                          success:function(res){
+                              var data = "<div class='list-group'>";
+                              $.each(res,function(index,value){
+                                  data += "<p class='list-group-item list-group-item-action'>"+value.name+"</p>";
+                              });
+                              data += "</div>";
+                              $("#datalist").html(data);
+                          }
+                      });
+                  });
+              });
+          </script>
+
+          <script type="text/javascript">
+          </script>
+</head>
+<body>
+    <div class="container body-content">
+
+
+
+
+<div class="container">
+
+
+<p><h4>Environment</h4></p>
+<form action="{{ url_for('jobStatus')}}" method="post">
+<input class="form-control" type="text" placeholder="env name" name="env_name"></input>
+
+
+<p><h4>Choose Job</h4></p>
+<input type="text" id="livebox" placeholder="job name" class="form-control" name="job_name"></input>
+
+<p id = "datalist"></p>
+
+<button class="btn btn-primary" type="submit">Run Job</button>
+</form>
+</div>
+
+
+
+    </div>
+</body>
+</html>
