@@ -1,0 +1,1763 @@
+{
+  "jobs": [
+    {
+      "name": "bqArticleRanking",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqArticleRanking-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqArticleRanking",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqArticleRanking/process_bqArticleRanking_${date}.json"
+    },
+    {
+      "name": "googleSheets",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-googleSheets-importer-starter",
+      "stepFunctionName": "${environment}ImporterGoogleSheets",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/googleSheets/process_googleSheets_${date}.json"
+    },
+    {
+      "name": "adwordsAdgroup",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adwordsAdgroup-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdwordsAdgroup",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adwordsAdgroup/process_adwordsAdgroup_${date}.json"
+    },
+    {
+      "name": "evintChargeRates",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintChargeRates-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintChargeRates",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintChargeRates/process_evintChargeRates_${date}.json"
+    },
+    {
+      "name": "evintChargeRatesMain",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintChargeRatesMain-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintChargeRatesMain",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintChargeRatesMain/process_evintChargeRatesMain_${date}.json"
+    },
+    {
+      "name": "awin",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-awin-importer-starter",
+      "stepFunctionName": "${environment}ImporterAwin",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/awin/process_awin_${date}.json"
+    },
+    {
+      "name": "ekomi",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-ekomi-importer-starter",
+      "stepFunctionName": "${environment}ImporterEkomi",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/ekomi/process_ekomi_${date}.json"
+    },
+    {
+      "name": "adwordsGeo",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adwordsGeo-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdwordsGeo",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adwordsGeo/process_adwordsGeo_${date}.json"
+    },
+    {
+      "name": "evintProjectTimes",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintProjectTimes-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintProjectTimes",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintProjectTimes/process_evintProjectTimes_${date}.json"
+    },
+    {
+      "name": "facebook",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-facebook-importer-starter",
+      "stepFunctionName": "${environment}ImporterFacebook",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/facebook/process_facebook_${date}.json"
+    },
+    {
+      "name": "bqWSNavigationClick",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqWSNavigationClick-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqWSNavigationClick",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqWSNavigationClick/process_bqWSNavigationClick_${date}.json"
+    },
+    {
+      "name": "soquero",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-soquero-importer-starter",
+      "stepFunctionName": "${environment}ImporterSoquero",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/soquero/process_soquero_${date}.json"
+    },
+    {
+      "name": "bqDiscSearchFilter",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDiscSearchFilter-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDiscSearchFilter",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDiscSearchFilter/process_bqDiscSearchFilter_${date}.json"
+    },
+    {
+      "name": "bingAdsKeyword",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bingAdsKeyword-importer-starter",
+      "stepFunctionName": "${environment}ImporterBingAdsKeyword",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bingAdsKeyword/process_bingAdsKeyword_${date}.json"
+    },
+    {
+      "name": "bqArticlePDPVisits",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqArticlePDPVisits-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqArticlePDPVisits",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqArticlePDPVisits/process_bqArticlePDPVisits_${date}.json"
+    },
+    {
+      "name": "evintDailyWorkingTimes",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintDailyWorkingTimes-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintDailyWorkingTimes",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintDailyWorkingTimes/process_evintDailyWorkingTimes_${date}.json"
+    },
+    {
+      "name": "bingAdsCampaign",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bingAdsCampaign-importer-starter",
+      "stepFunctionName": "${environment}ImporterBingAdsCampaign",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bingAdsCampaign/process_bingAdsCampaign_${date}.json"
+    },
+    {
+      "name": "adwordsKeyword",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adwordsKeyword-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdwordsKeyword",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adwordsKeyword/process_adwordsKeyword_${date}.json"
+    },
+    {
+      "name": "evintBreakTimes",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintBreakTimes-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintBreakTimes",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintBreakTimes/process_evintBreakTimes_${date}.json"
+    },
+    {
+      "name": "adwordsAudience",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adwordsAudience-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdwordsAudience",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adwordsAudience/process_adwordsAudience_${date}.json"
+    },
+    {
+      "name": "bingAdsConversion",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bingAdsConversion-importer-starter",
+      "stepFunctionName": "${environment}ImporterBingAdsConversion",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bingAdsConversion/process_bingAdsConversion_${date}.json"
+    },
+    {
+      "name": "bqDiscSearchPDP",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDiscSearchPDP-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDiscSearchPDP",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDiscSearchPDP/process_bqDiscSearchPDP_${date}.json"
+    },
+    {
+      "name": "bqAllSessionsWS",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqAllSessionsWS-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqAllSessionsWS",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqAllSessionsWS/process_bqAllSessionsWS_${date}.json"
+    },
+    {
+      "name": "criteo",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-criteo-importer-starter",
+      "stepFunctionName": "${environment}ImporterCriteo",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/criteo/process_criteo_${date}.json"
+    },
+    {
+      "name": "adjust",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adjust-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdjust",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adjust/process_adjust_${date}.json"
+    },
+    {
+      "name": "googleAnalyticsIntProm",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-googleAnalyticsIntProm-importer-starter",
+      "stepFunctionName": "${environment}ImporterGoogleAnalyticsIntProm",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/googleAnalyticsIntProm/process_googleAnalyticsIntProm_${date}.json"
+    },
+    {
+      "name": "bqDataset",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDataset-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDataset",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDataset/process_bqDataset_${date}.json"
+    },
+    {
+      "name": "evintAbsences",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintAbsences-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintAbsences",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintAbsences/process_evintAbsences_${date}.json"
+    },
+    {
+      "name": "payback",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-payback-importer-starter",
+      "stepFunctionName": "${environment}ImporterPayback",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/payback/process_payback_${date}.json"
+    },
+    {
+      "name": "forecastReorder",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-forecastReorder-importer-starter",
+      "stepFunctionName": "${environment}ImporterForecastReorder",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/forecastReorder/process_forecastReorder_${date}.json"
+    },
+    {
+      "name": "priceApi",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-priceApi-importer-starter",
+      "stepFunctionName": "${environment}ImporterPriceApi",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/priceApi/process_priceApi_${date}.json"
+    },
+    {
+      "name": "bqEvents",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqEvents-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqEvents",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqEvents/process_bqEvents_${date}.json"
+    },
+    {
+      "name": "bqDiscSearchFullText",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDiscSearchFullText-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDiscSearchFullText",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDiscSearchFullText/process_bqDiscSearchFullText_${date}.json"
+    },
+    {
+      "name": "evintEmployees",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintEmployees-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintEmployees",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintEmployees/process_evintEmployees_${date}.json"
+    },
+    {
+      "name": "googleAnalyticsPageUrl",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-googleAnalyticsPageUrl-importer-starter",
+      "stepFunctionName": "${environment}ImporterGoogleAnalyticsPageUrl",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/googleAnalyticsPageUrl/process_googleAnalyticsPageUrl_${date}.json"
+    },
+    {
+      "name": "bqAllSessionsApp",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqAllSessionsApp-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqAllSessionsApp",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqAllSessionsApp/process_bqAllSessionsApp_${date}.json"
+    },
+    {
+      "name": "bqDiscSearchImpresion",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDiscSearchImpresion-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDiscSearchImpresion",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDiscSearchImpresion/process_bqDiscSearchImpresion_${date}.json"
+    },
+    {
+      "name": "bqAllTransactions",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqAllTransactions-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqAllTransactions",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqAllTransactions/process_bqAllTransactions_${date}.json"
+    },
+    {
+      "name": "contactCenter",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-contactCenter-importer-starter",
+      "stepFunctionName": "${environment}ImporterContactCenter",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/contactCenter/process_contactCenter_${date}.json"
+    },
+    {
+      "name": "googleAnalyticsLanding",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-googleAnalyticsLanding-importer-starter",
+      "stepFunctionName": "${environment}ImporterGoogleAnalyticsLanding",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/googleAnalyticsLanding/process_googleAnalyticsLanding_${date}.json"
+    },
+    {
+      "name": "bqDiscSearchAutoSug",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqDiscSearchAutoSug-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqDiscSearchAutoSug",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqDiscSearchAutoSug/process_bqDiscSearchAutoSug_${date}.json"
+    },
+    {
+      "name": "bqCompetitorPrice",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-bqCompetitorPrice-importer-starter",
+      "stepFunctionName": "${environment}ImporterBqCompetitorPrice",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/bqCompetitorPrice/process_bqCompetitorPrice_${date}.json"
+    },
+    {
+      "name": "ingenious",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-ingenious-importer-starter",
+      "stepFunctionName": "${environment}ImporterIngenious",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/ingenious/process_ingenious_${date}.json"
+    },
+    {
+      "name": "evintShiftSchedule",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-evintShiftSchedule-importer-starter",
+      "stepFunctionName": "${environment}ImporterEvintShiftSchedule",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/evintShiftSchedule/process_evintShiftSchedule_${date}.json"
+    },
+    {
+      "name": "adwordsCampaign",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-adwordsCampaign-importer-starter",
+      "stepFunctionName": "${environment}ImporterAdwordsCampaign",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/adwordsCampaign/process_adwordsCampaign_${date}.json"
+    },
+    {
+      "name": "surveyGizmo",
+      "stage": "Importer",
+      "starterLambdaName": "${environment}-surveyGizmo-importer-starter",
+      "stepFunctionName": "${environment}ImporterSurveyGizmo",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Importer/surveyGizmo/process_surveyGizmo_${date}.json"
+    },
+    {
+      "name": "DedupCategory",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupCategory-starter",
+      "stepFunctionName": "${environment}DedupDedupCategory",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupCategory/process_DedupCategory_${date}.json"
+    },
+    {
+      "name": "DedupStockReservation",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupStockReservation-starter",
+      "stepFunctionName": "${environment}DedupDedupStockReservation",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupStockReservation/process_DedupStockReservation_${date}.json"
+    },
+    {
+      "name": "DedupCustomer",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupCustomer-starter",
+      "stepFunctionName": "${environment}DedupDedupCustomer",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupCustomer/process_DedupCustomer_${date}.json"
+    },
+    {
+      "name": "DedupCatalogRerun",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupCatalogRerun-starter",
+      "stepFunctionName": "${environment}DedupDedupCatalogRerun",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupCatalogRerun/process_DedupCatalogRerun_${date}.json"
+    },
+    {
+      "name": "DedupTechKpi",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupTechKpi-starter",
+      "stepFunctionName": "${environment}DedupDedupTechKpi",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupTechKpi/process_DedupTechKpi_${date}.json"
+    },
+    {
+      "name": "DedupReclamation",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupReclamation-starter",
+      "stepFunctionName": "${environment}DedupDedupReclamation",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupReclamation/process_DedupReclamation_${date}.json"
+    },
+    {
+      "name": "DedupContentTree",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupContentTree-starter",
+      "stepFunctionName": "${environment}DedupDedupContentTree",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupContentTree/process_DedupContentTree_${date}.json"
+    },
+    {
+      "name": "DedupStockStock",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupStockStock-starter",
+      "stepFunctionName": "${environment}DedupDedupStockStock",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupStockStock/process_DedupStockStock_${date}.json"
+    },
+    {
+      "name": "DedupNotification",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupNotification-starter",
+      "stepFunctionName": "${environment}DedupDedupNotification",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupNotification/process_DedupNotification_${date}.json"
+    },
+    {
+      "name": "DedupSubscription",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupSubscription-starter",
+      "stepFunctionName": "${environment}DedupDedupSubscription",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupSubscription/process_DedupSubscription_${date}.json"
+    },
+    {
+      "name": "DedupCatalog",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupCatalog-starter",
+      "stepFunctionName": "${environment}DedupDedupCatalog",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupCatalog/process_DedupCatalog_${date}.json"
+    },
+    {
+      "name": "DedupStockLocation",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupStockLocation-starter",
+      "stepFunctionName": "${environment}DedupDedupStockLocation",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupStockLocation/process_DedupStockLocation_${date}.json"
+    },
+    {
+      "name": "DedupOrderV3",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupOrderV3-starter",
+      "stepFunctionName": "${environment}DedupDedupOrderV3",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupOrderV3/process_DedupOrderV3_${date}.json"
+    },
+    {
+      "name": "DedupJarvisCampaign",
+      "stage": "Deduplication",
+      "starterLambdaName": "${environment}-emr-dedupEMR-DedupJarvisCampaign-starter",
+      "stepFunctionName": "${environment}DedupDedupJarvisCampaign",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Deduplication/DedupJarvisCampaign/process_DedupJarvisCampaign_${date}.json"
+    },
+    {
+      "name": "CategoriesLangUpload",
+      "stage": "AsyncTask",
+      "starterLambdaName": "${environment}-Discovery-CategoriesLangUpload-starter",
+      "stepFunctionName": "${environment}DiscoveryCategoriesLangUploadStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/AsyncTask/CategoriesLangUpload/process_CategoriesLangUpload_${date}.json"
+    },
+    {
+      "name": "ArticlesUploader",
+      "stage": "AsyncTask",
+      "starterLambdaName": "${environment}-Discovery-ArticlesUploader-starter",
+      "stepFunctionName": "${environment}DiscoveryArticlesUploaderStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/AsyncTask/ArticlesUploader/process_ArticlesUploader_${date}.json"
+    },
+    {
+      "name": "CategoriesUploader",
+      "stage": "AsyncTask",
+      "starterLambdaName": "${environment}-Discovery-CategoriesUploader-starter",
+      "stepFunctionName": "${environment}DiscoveryCategoriesUploaderStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/AsyncTask/CategoriesUploader/process_CategoriesUploader_${date}.json"
+    },
+    {
+      "name": "UploadRankingAInput",
+      "stage": "AsyncTask",
+      "starterLambdaName": "${environment}-Discovery-UploadRankingAInput-starter",
+      "stepFunctionName": "${environment}DiscoveryUploadRankingAInputStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/AsyncTask/UploadRankingAInput/process_UploadRankingAInput_${date}.json"
+    },
+    {
+      "name": "WithLangUploader",
+      "stage": "AsyncTask",
+      "starterLambdaName": "${environment}-Discovery-WithLangUploader-starter",
+      "stepFunctionName": "${environment}DiscoveryWithLangUploaderStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/AsyncTask/WithLangUploader/process_WithLangUploader_${date}.json"
+    },
+    {
+      "name": "ItemMarginAttributes",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-ItemMarginAttributes-starter",
+      "stepFunctionName": "${environment}BatchItemMarginAttributesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/External/ItemMarginAttributes/process_ItemMarginAttributes_${date}.json"
+    },
+    {
+      "name": "SalesMarginAttributes",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-SalesMarginAttributes-starter",
+      "stepFunctionName": "${environment}BatchSalesMarginAttributesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/External/SalesMarginAttributes/process_SalesMarginAttributes_${date}.json"
+    },
+    {
+      "name": "FabricSamplesEmarsys",
+      "stage": "AsyncTask",
+      "starterLambdaName": "${environment}-BatchUpload-FabricSamplesEmarsys-starter",
+      "stepFunctionName": "${environment}BatchUploadFabricSamplesEmarsysStateMachine"
+    },
+    {
+      "name": "DataActivation",
+      "stage": "AsyncTask",
+      "starterLambdaName": "${environment}-BatchDataActivation-DataActivation-starter",
+      "stepFunctionName": "${environment}BatchDataActivationDataActivationStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/AsyncTask/DataActivation/process_DataActivation_${date}.json"
+    },
+    {
+      "name": "GdprDataCleaner",
+      "stage": "AsyncTask",
+      "starterLambdaName": "${environment}-BatchGdpr-GdprDataCleaner-starter",
+      "stepFunctionName": "${environment}BatchGdprGdprDataCleanerStateMachine"
+    },
+    {
+      "name": "jarvisCampaign",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-jarvisCampaign-merger-stream-starter",
+      "stepFunctionName": "${environment}JarvisCampaignMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/jarvisCampaign/process_jarvisCampaign_${date}.json"
+    },
+    {
+      "name": "catalogRerun",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-catalogRerun-merger-stream-starter",
+      "stepFunctionName": "${environment}CatalogRerunMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/catalogRerun/process_catalogRerun_${date}.json"
+    },
+    {
+      "name": "stockLocation",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-stockLocation-merger-stream-starter",
+      "stepFunctionName": "${environment}StockLocationMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/stockLocation/process_stockLocation_${date}.json"
+    },
+    {
+      "name": "techKpi",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-techKpi-merger-stream-starter",
+      "stepFunctionName": "${environment}TechKpiMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/techKpi/process_techKpi_${date}.json"
+    },
+    {
+      "name": "inventory",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-inventory-merger-stream-starter",
+      "stepFunctionName": "${environment}InventoryMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/inventory/process_inventory_${date}.json"
+    },
+    {
+      "name": "orderV3",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-orderV3-merger-stream-starter",
+      "stepFunctionName": "${environment}OrderV3MergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/orderV3/process_orderV3_${date}.json"
+    },
+    {
+      "name": "contentTree",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-contentTree-merger-stream-starter",
+      "stepFunctionName": "${environment}ContentTreeMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/contentTree/process_contentTree_${date}.json"
+    },
+    {
+      "name": "productReview",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-productReview-merger-stream-starter",
+      "stepFunctionName": "${environment}ProductReviewMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/productReview/process_productReview_${date}.json"
+    },
+    {
+      "name": "notification",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-notification-merger-stream-starter",
+      "stepFunctionName": "${environment}NotificationMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/notification/process_notification_${date}.json"
+    },
+    {
+      "name": "stockReservation",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-stockReservation-merger-stream-starter",
+      "stepFunctionName": "${environment}StockReservationMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/stockReservation/process_stockReservation_${date}.json"
+    },
+    {
+      "name": "customer",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-customer-merger-stream-starter",
+      "stepFunctionName": "${environment}CustomerMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/customer/process_customer_${date}.json"
+    },
+    {
+      "name": "category",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-category-merger-stream-starter",
+      "stepFunctionName": "${environment}CategoryMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/category/process_category_${date}.json"
+    },
+    {
+      "name": "stockStock",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-stockStock-merger-stream-starter",
+      "stepFunctionName": "${environment}StockStockMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/stockStock/process_stockStock_${date}.json"
+    },
+    {
+      "name": "reclamation",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-reclamation-merger-stream-starter",
+      "stepFunctionName": "${environment}ReclamationMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/reclamation/process_reclamation_${date}.json"
+    },
+    {
+      "name": "subscription",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-subscription-merger-stream-starter",
+      "stepFunctionName": "${environment}SubscriptionMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/subscription/process_subscription_${date}.json"
+    },
+    {
+      "name": "catalog",
+      "stage": "Merger",
+      "starterLambdaName": "${environment}-catalog-merger-stream-starter",
+      "stepFunctionName": "${environment}CatalogMergeMergerStepFunction",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Merger/catalog/process_catalog_${date}.json"
+    },
+    {
+      "name": "PostPrcsMktProductFeed",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsMktProductFeed-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsMktProductFeedStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsMktProductFeed/process_PostPrcsMktProductFeed_${date}.json"
+    },
+    {
+      "name": "PostPrcsMktDashboardBase",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsMktDashboardBase-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsMktDashboardBaseStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsMktDashboardBase/process_PostPrcsMktDashboardBase_${date}.json"
+    },
+    {
+      "name": "PostPrcsNotification",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsNotification-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsNotificationStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsNotification/process_PostPrcsNotification_${date}.json"
+    },
+    {
+      "name": "PostPrcsJarvisCampaign",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsJarvisCampaign-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsJarvisCampaignStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsJarvisCampaign/process_PostPrcsJarvisCampaign_${date}.json"
+    },
+    {
+      "name": "PostPrcsLogJobProcessTime",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsLogJobProcessTime-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsLogJobProcessTimeStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsLogJobProcessTime/process_PostPrcsLogJobProcessTime_${date}.json"
+    },
+    {
+      "name": "PostPrcsMktCostAllocSku",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsMktCostAllocSku-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsMktCostAllocSkuStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsMktCostAllocSku/process_PostPrcsMktCostAllocSku_${date}.json"
+    },
+    {
+      "name": "PostPrcsForecastReorder",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsForecastReorder-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsForecastReorderStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsForecastReorder/process_PostPrcsForecastReorder_${date}.json"
+    },
+    {
+      "name": "PostPrcsEvintDailyWorkingTimes",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsEvintDailyWorkingTimes-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsEvintDailyWorkingTimesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsEvintDailyWorkingTimes/process_PostPrcsEvintDailyWorkingTimes_${date}.json"
+    },
+    {
+      "name": "PostPrcsMktCostAllocCategory",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsMktCostAllocCategory-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsMktCostAllocCategoryStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsMktCostAllocCategory/process_PostPrcsMktCostAllocCategory_${date}.json"
+    },
+    {
+      "name": "PostPrcsContactCenterAgentHist",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsContactCenterAgentHist-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsContactCenterAgentHistStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsContactCenterAgentHist/process_PostPrcsContactCenterAgentHist_${date}.json"
+    },
+    {
+      "name": "PostPrcsJarvisCampaignProduct",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsJarvisCampaignProduct-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsJarvisCampaignProductStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsJarvisCampaignProduct/process_PostPrcsJarvisCampaignProduct_${date}.json"
+    },
+    {
+      "name": "PostPrcsSalesOrderAggregate",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsSalesOrderAggregate-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsSalesOrderAggregateStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsSalesOrderAggregate/process_PostPrcsSalesOrderAggregate_${date}.json"
+    },
+    {
+      "name": "PostPrcsReclamation",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsReclamation-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsReclamationStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsReclamation/process_PostPrcsReclamation_${date}.json"
+    },
+    {
+      "name": "PostPrcsSalesOrderLine",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsSalesOrderLine-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsSalesOrderLineStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsSalesOrderLine/process_PostPrcsSalesOrderLine_${date}.json"
+    },
+    {
+      "name": "PostPrcsSapItemMasterData",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsSapItemMasterData-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsSapItemMasterDataStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsSapItemMasterData/process_PostPrcsSapItemMasterData_${date}.json"
+    },
+    {
+      "name": "PostPrcsCriteoCategorMaster",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsCriteoCategorMaster-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsCriteoCategorMasterStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsCriteoCategorMaster/process_PostPrcsCriteoCategorMaster_${date}.json"
+    },
+    {
+      "name": "PostPrcsNpsCRM",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsNpsCRM-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsNpsCRMStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsNpsCRM/process_PostPrcsNpsCRM_${date}.json"
+    },
+    {
+      "name": "PostPrcsBQArticlesPDP",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsBQArticlesPDP-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsBQArticlesPDPStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsBQArticlesPDP/process_PostPrcsBQArticlesPDP_${date}.json"
+    },
+    {
+      "name": "PostPrcsTechKpi",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsTechKpi-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsTechKpiStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsTechKpi/process_PostPrcsTechKpi_${date}.json"
+    },
+    {
+      "name": "PostPrcsContactCenterContacts",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsContactCenterContacts-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsContactCenterContactsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsContactCenterContacts/process_PostPrcsContactCenterContacts_${date}.json"
+    },
+    {
+      "name": "PostPrcsMktWeeklyCohort",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsMktWeeklyCohort-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsMktWeeklyCohortStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsMktWeeklyCohort/process_PostPrcsMktWeeklyCohort_${date}.json"
+    },
+    {
+      "name": "PostPrcsMktTargetsForecast",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsMktTargetsForecast-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsMktTargetsForecastStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsMktTargetsForecast/process_PostPrcsMktTargetsForecast_${date}.json"
+    },
+    {
+      "name": "PostPrcsNpsResults",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsNpsResults-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsNpsResultsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsNpsResults/process_PostPrcsNpsResults_${date}.json"
+    },
+    {
+      "name": "PostPrcsEvintChargeratesMain",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsEvintChargeratesMain-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsEvintChargeratesMainStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsEvintChargeratesMain/process_PostPrcsEvintChargeratesMain_${date}.json"
+    },
+    {
+      "name": "PostPrcsVoucherTool",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsVoucherTool-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsVoucherToolStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsVoucherTool/process_PostPrcsVoucherTool_${date}.json"
+    },
+    {
+      "name": "PostPrcsEvintProjectTimes",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsEvintProjectTimes-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsEvintProjectTimesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsEvintProjectTimes/process_PostPrcsEvintProjectTimes_${date}.json"
+    },
+    {
+      "name": "PostPrcsMktTargetsPlan",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsMktTargetsPlan-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsMktTargetsPlanStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsMktTargetsPlan/process_PostPrcsMktTargetsPlan_${date}.json"
+    },
+    {
+      "name": "PostPrcsCustomer",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsCustomer-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsCustomerStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsCustomer/process_PostPrcsCustomer_${date}.json"
+    },
+    {
+      "name": "PostPrcsMktCostConsolidated",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsMktCostConsolidated-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsMktCostConsolidatedStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsMktCostConsolidated/process_PostPrcsMktCostConsolidated_${date}.json"
+    },
+    {
+      "name": "PostPrcsGoogleAnalyticsCamp",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsGoogleAnalyticsCamp-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsGoogleAnalyticsCampStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsGoogleAnalyticsCamp/process_PostPrcsGoogleAnalyticsCamp_${date}.json"
+    },
+    {
+      "name": "PostPrcsEvintChargerates",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsEvintChargerates-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsEvintChargeratesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsEvintChargerates/process_PostPrcsEvintChargerates_${date}.json"
+    },
+    {
+      "name": "PostPrcsSapItemMargin",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsSapItemMargin-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsSapItemMarginStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsSapItemMargin/process_PostPrcsSapItemMargin_${date}.json"
+    },
+    {
+      "name": "PostPrcsCategoryWithLang",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsCategoryWithLang-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsCategoryWithLangStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsCategoryWithLang/process_PostPrcsCategoryWithLang_${date}.json"
+    },
+    {
+      "name": "PostPrcsContactCenterAgents",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsContactCenterAgents-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsContactCenterAgentsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsContactCenterAgents/process_PostPrcsContactCenterAgents_${date}.json"
+    },
+    {
+      "name": "PostPrcsGoogleAnalyticsLanding",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsGoogleAnalyticsLanding-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsGoogleAnalyticsLandingStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsGoogleAnalyticsLanding/process_PostPrcsGoogleAnalyticsLanding_${date}.json"
+    },
+    {
+      "name": "PostPrcsMktCostAllocPku",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsMktCostAllocPku-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsMktCostAllocPkuStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsMktCostAllocPku/process_PostPrcsMktCostAllocPku_${date}.json"
+    },
+    {
+      "name": "PostPrcsMktRevenuePdp",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsMktRevenuePdp-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsMktRevenuePdpStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsMktRevenuePdp/process_PostPrcsMktRevenuePdp_${date}.json"
+    },
+    {
+      "name": "PostPrcsCrossDeviceMap",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsCrossDeviceMap-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsCrossDeviceMapStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsCrossDeviceMap/process_PostPrcsCrossDeviceMap_${date}.json"
+    },
+    {
+      "name": "PostPrcsSalesOrderLineCons",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsSalesOrderLineCons-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsSalesOrderLineConsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsSalesOrderLineCons/process_PostPrcsSalesOrderLineCons_${date}.json"
+    },
+    {
+      "name": "PostPrcsEvintEmployees",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsEvintEmployees-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsEvintEmployeesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsEvintEmployees/process_PostPrcsEvintEmployees_${date}.json"
+    },
+    {
+      "name": "PostPrcsGoogleAnalyticsIntProm",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsGoogleAnalyticsIntProm-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsGoogleAnalyticsIntPromStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsGoogleAnalyticsIntProm/process_PostPrcsGoogleAnalyticsIntProm_${date}.json"
+    },
+    {
+      "name": "PostPrcsContentTreeWithLang",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsContentTreeWithLang-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsContentTreeWithLangStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsContentTreeWithLang/process_PostPrcsContentTreeWithLang_${date}.json"
+    },
+    {
+      "name": "PostPrcsMktRfmAnalysis",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsMktRfmAnalysis-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsMktRfmAnalysisStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsMktRfmAnalysis/process_PostPrcsMktRfmAnalysis_${date}.json"
+    },
+    {
+      "name": "PostPrcsCategory",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsCategory-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsCategoryStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsCategory/process_PostPrcsCategory_${date}.json"
+    },
+    {
+      "name": "PostPrcsItemCatalogWithLang",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsItemCatalogWithLang-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsItemCatalogWithLangStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsItemCatalogWithLang/process_PostPrcsItemCatalogWithLang_${date}.json"
+    },
+    {
+      "name": "PostPrcsEvintAbsences",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsEvintAbsences-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsEvintAbsencesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsEvintAbsences/process_PostPrcsEvintAbsences_${date}.json"
+    },
+    {
+      "name": "PostPrcsStockReservHist",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsStockReservHist-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsStockReservHistStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsStockReservHist/process_PostPrcsStockReservHist_${date}.json"
+    },
+    {
+      "name": "PostPrcsStockLocation",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsStockLocation-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsStockLocationStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsStockLocation/process_PostPrcsStockLocation_${date}.json"
+    },
+    {
+      "name": "PostPrcsEkomiHash",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsEkomiHash-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsEkomiHashStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsEkomiHash/process_PostPrcsEkomiHash_${date}.json"
+    },
+    {
+      "name": "PostPrcsItemCatalog",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsItemCatalog-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsItemCatalogStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsItemCatalog/process_PostPrcsItemCatalog_${date}.json"
+    },
+    {
+      "name": "PostPrcsAwsCosts",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsAwsCosts-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsAwsCostsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsAwsCosts/process_PostPrcsAwsCosts_${date}.json"
+    },
+    {
+      "name": "PostPrcsEvintBreakTimes",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsEvintBreakTimes-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsEvintBreakTimesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsEvintBreakTimes/process_PostPrcsEvintBreakTimes_${date}.json"
+    },
+    {
+      "name": "PostPrcsAdjustTracker",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsAdjustTracker-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsAdjustTrackerStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsAdjustTracker/process_PostPrcsAdjustTracker_${date}.json"
+    },
+    {
+      "name": "PostPrcsEvintShiftSchedule",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-Batch-PostPrcsEvintShiftSchedule-starter",
+      "stepFunctionName": "${environment}BatchPostPrcsEvintShiftScheduleStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/PostProcess/PostPrcsEvintShiftSchedule/process_PostPrcsEvintShiftSchedule_${date}.json"
+    },
+    {
+      "name": "GeneralSalesCSV",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-BatchRecommendation-GeneralSalesCSV-starter",
+      "stepFunctionName": "${environment}BatchRecommendationGeneralSalesCSVStateMachine"
+    },
+    {
+      "name": "SitemapGenerator",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-BatchSitemap-SitemapGenerator-starter",
+      "stepFunctionName": "${environment}BatchSitemapSitemapGeneratorStateMachine"
+    },
+    {
+      "name": "SitemapGenerator",
+      "stage": "PostProcess",
+      "starterLambdaName": "${environment}-TableauRefresh-SitemapGenerator-starter",
+      "stepFunctionName": "${environment}TableauRefreshSitemapGeneratorStateMachine"
+    },
+    {
+      "name": "RecommendationsPerSku",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-RecommendationsPerSku-starter",
+      "stepFunctionName": "${environment}BatchRecommendationsPerSkuStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/RecommendationsPerSku/process_RecommendationsPerSku_${date}.json"
+    },
+    {
+      "name": "EkomiHash",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-EkomiHash-starter",
+      "stepFunctionName": "${environment}BatchEkomiHashStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/EkomiHash/process_EkomiHash_${date}.json"
+    },
+    {
+      "name": "AdwordsGeo",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-AdwordsGeo-starter",
+      "stepFunctionName": "${environment}BatchAdwordsGeoStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/AdwordsGeo/process_AdwordsGeo_${date}.json"
+    },
+    {
+      "name": "AwinTransactions",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-AwinTransactions-starter",
+      "stepFunctionName": "${environment}BatchAwinTransactionsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/AwinTransactions/process_AwinTransactions_${date}.json"
+    },
+    {
+      "name": "FacebookMarketing",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-FacebookMarketing-starter",
+      "stepFunctionName": "${environment}BatchFacebookMarketingStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/FacebookMarketing/process_FacebookMarketing_${date}.json"
+    },
+    {
+      "name": "GoogleAnalyticsCampaign",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-GoogleAnalyticsCampaign-starter",
+      "stepFunctionName": "${environment}BatchGoogleAnalyticsCampaignStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/GoogleAnalyticsCampaign/process_GoogleAnalyticsCampaign_${date}.json"
+    },
+    {
+      "name": "BQArticlesPDP",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-BQArticlesPDP-starter",
+      "stepFunctionName": "${environment}BatchBQArticlesPDPStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/BQArticlesPDP/process_BQArticlesPDP_${date}.json"
+    },
+    {
+      "name": "StreamJarvisCampaign",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-StreamJarvisCampaign-starter",
+      "stepFunctionName": "${environment}BatchStreamJarvisCampaignStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamJarvisCampaign/process_StreamJarvisCampaign_${date}.json"
+    },
+    {
+      "name": "ContactCenterContacts",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-ContactCenterContacts-starter",
+      "stepFunctionName": "${environment}BatchContactCenterContactsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/ContactCenterContacts/process_ContactCenterContacts_${date}.json"
+    },
+    {
+      "name": "BQTransactions",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-BQTransactions-starter",
+      "stepFunctionName": "${environment}BatchBQTransactionsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/BQTransactions/process_BQTransactions_${date}.json"
+    },
+    {
+      "name": "BQArticlesRanking",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-BQArticlesRanking-starter",
+      "stepFunctionName": "${environment}BatchBQArticlesRankingStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/BQArticlesRanking/process_BQArticlesRanking_${date}.json"
+    },
+    {
+      "name": "ContactCenterAgents",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-ContactCenterAgents-starter",
+      "stepFunctionName": "${environment}BatchContactCenterAgentsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/ContactCenterAgents/process_ContactCenterAgents_${date}.json"
+    },
+    {
+      "name": "StreamOrderV3Snapshot",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-StreamOrderV3Snapshot-starter",
+      "stepFunctionName": "${environment}PreProcessStreamOrderV3Snapshot",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamOrderV3Snapshot/process_StreamOrderV3Snapshot_${date}.json"
+    },
+    {
+      "name": "ItemMarginAttributes",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-ItemMarginAttributes-starter",
+      "stepFunctionName": "${environment}BatchItemMarginAttributesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/ItemMarginAttributes/process_ItemMarginAttributes_${date}.json"
+    },
+    {
+      "name": "StreamSubscription",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-StreamSubscription-starter",
+      "stepFunctionName": "${environment}BatchStreamSubscriptionStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamSubscription/process_StreamSubscription_${date}.json"
+    },
+    {
+      "name": "GoogleSheets",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-GoogleSheets-starter",
+      "stepFunctionName": "${environment}BatchGoogleSheetsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/GoogleSheets/process_GoogleSheets_${date}.json"
+    },
+    {
+      "name": "EvintDailyWorkingTimes",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-EvintDailyWorkingTimes-starter",
+      "stepFunctionName": "${environment}PreProcessEvintDailyWorkingTimes",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/EvintDailyWorkingTimes/process_EvintDailyWorkingTimes_${date}.json"
+    },
+    {
+      "name": "IngeniousTransactions",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-IngeniousTransactions-starter",
+      "stepFunctionName": "${environment}BatchIngeniousTransactionsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/IngeniousTransactions/process_IngeniousTransactions_${date}.json"
+    },
+    {
+      "name": "StreamTechKpi",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-StreamTechKpi-starter",
+      "stepFunctionName": "${environment}BatchStreamTechKpiStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamTechKpi/process_StreamTechKpi_${date}.json"
+    },
+    {
+      "name": "AdwordsCampaign",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-AdwordsCampaign-starter",
+      "stepFunctionName": "${environment}BatchAdwordsCampaignStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/AdwordsCampaign/process_AdwordsCampaign_${date}.json"
+    },
+    {
+      "name": "PaybackTransactions",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-PaybackTransactions-starter",
+      "stepFunctionName": "${environment}BatchPaybackTransactionsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/PaybackTransactions/process_PaybackTransactions_${date}.json"
+    },
+    {
+      "name": "BQNavigationClick",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-BQNavigationClick-starter",
+      "stepFunctionName": "${environment}BatchBQNavigationClickStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/BQNavigationClick/process_BQNavigationClick_${date}.json"
+    },
+    {
+      "name": "StreamCatalogSnapshotLang",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-StreamCatalogSnapshotLang-starter",
+      "stepFunctionName": "${environment}PreProcessStreamCatalogSnapshotLang",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamCatalogSnapshotLang/process_StreamCatalogSnapshotLang_${date}.json"
+    },
+    {
+      "name": "StreamStockStock",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-StreamStockStock-starter",
+      "stepFunctionName": "${environment}PreProcessStreamStockStock",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamStockStock/process_StreamStockStock_${date}.json"
+    },
+    {
+      "name": "BingKeyword",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-BingKeyword-starter",
+      "stepFunctionName": "${environment}BatchBingKeywordStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/BingKeyword/process_BingKeyword_${date}.json"
+    },
+    {
+      "name": "AdwordsAudience",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-AdwordsAudience-starter",
+      "stepFunctionName": "${environment}BatchAdwordsAudienceStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/AdwordsAudience/process_AdwordsAudience_${date}.json"
+    },
+    {
+      "name": "AdwordsAdgroup",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-AdwordsAdgroup-starter",
+      "stepFunctionName": "${environment}BatchAdwordsAdgroupStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/AdwordsAdgroup/process_AdwordsAdgroup_${date}.json"
+    },
+    {
+      "name": "ForecastSupplyChainV2",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-ForecastSupplyChainV2-starter",
+      "stepFunctionName": "${environment}BatchForecastSupplyChainV2StateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/ForecastSupplyChainV2/process_ForecastSupplyChainV2_${date}.json"
+    },
+    {
+      "name": "StreamReclamation",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-StreamReclamation-starter",
+      "stepFunctionName": "${environment}BatchStreamReclamationStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamReclamation/process_StreamReclamation_${date}.json"
+    },
+    {
+      "name": "BingCampaigns",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-BingCampaigns-starter",
+      "stepFunctionName": "${environment}BatchBingCampaignsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/BingCampaigns/process_BingCampaigns_${date}.json"
+    },
+    {
+      "name": "CriteoCampaignMaster",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-CriteoCampaignMaster-starter",
+      "stepFunctionName": "${environment}BatchCriteoCampaignMasterStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/CriteoCampaignMaster/process_CriteoCampaignMaster_${date}.json"
+    },
+    {
+      "name": "StreamCatalogSnapshot",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-StreamCatalogSnapshot-starter",
+      "stepFunctionName": "${environment}PreProcessStreamCatalogSnapshot",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamCatalogSnapshot/process_StreamCatalogSnapshot_${date}.json"
+    },
+    {
+      "name": "BQCompetitorPrice",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-BQCompetitorPrice-starter",
+      "stepFunctionName": "${environment}BatchBQCompetitorPriceStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/BQCompetitorPrice/process_BQCompetitorPrice_${date}.json"
+    },
+    {
+      "name": "ForecastReorder",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-ForecastReorder-starter",
+      "stepFunctionName": "${environment}BatchForecastReorderStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/ForecastReorder/process_ForecastReorder_${date}.json"
+    },
+    {
+      "name": "SapItemMasterData",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-SapItemMasterData-starter",
+      "stepFunctionName": "${environment}BatchSapItemMasterDataStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/SapItemMasterData/process_SapItemMasterData_${date}.json"
+    },
+    {
+      "name": "EvintChargerates",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-EvintChargerates-starter",
+      "stepFunctionName": "${environment}BatchEvintChargeratesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/EvintChargerates/process_EvintChargerates_${date}.json"
+    },
+    {
+      "name": "StreamCategory",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-StreamCategory-starter",
+      "stepFunctionName": "${environment}BatchStreamCategoryStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamCategory/process_StreamCategory_${date}.json"
+    },
+    {
+      "name": "EvintEmployees",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-EvintEmployees-starter",
+      "stepFunctionName": "${environment}BatchEvintEmployeesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/EvintEmployees/process_EvintEmployees_${date}.json"
+    },
+    {
+      "name": "SapSalesOrder",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-SapSalesOrder-starter",
+      "stepFunctionName": "${environment}BatchSapSalesOrderStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/SapSalesOrder/process_SapSalesOrder_${date}.json"
+    },
+    {
+      "name": "EvintShiftSchedule",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-EvintShiftSchedule-starter",
+      "stepFunctionName": "${environment}PreProcessEvintShiftSchedule",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/EvintShiftSchedule/process_EvintShiftSchedule_${date}.json"
+    },
+    {
+      "name": "GoogleAnalyticsIntProm",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-GoogleAnalyticsIntProm-starter",
+      "stepFunctionName": "${environment}BatchGoogleAnalyticsIntPromStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/GoogleAnalyticsIntProm/process_GoogleAnalyticsIntProm_${date}.json"
+    },
+    {
+      "name": "StreamCatalogDeduplicated",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-dedupEMR-StreamCatalogDeduplicated-starter",
+      "stepFunctionName": "${environment}PreProcessStreamCatalogDeduplicated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamCatalogDeduplicated/process_StreamCatalogDeduplicated_${date}.json"
+    },
+    {
+      "name": "StreamNotification",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-StreamNotification-starter",
+      "stepFunctionName": "${environment}PreProcessStreamNotification",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamNotification/process_StreamNotification_${date}.json"
+    },
+    {
+      "name": "StreamStockReservation",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-StreamStockReservation-starter",
+      "stepFunctionName": "${environment}PreProcessStreamStockReservation",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamStockReservation/process_StreamStockReservation_${date}.json"
+    },
+    {
+      "name": "ProductReview",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-salesEMR-ProductReview-starter",
+      "stepFunctionName": "${environment}PreProcessProductReview",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/ProductReview/process_ProductReview_${date}.json"
+    },
+    {
+      "name": "StreamStockLocation",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-StreamStockLocation-starter",
+      "stepFunctionName": "${environment}BatchStreamStockLocationStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamStockLocation/process_StreamStockLocation_${date}.json"
+    },
+    {
+      "name": "StreamCategoryLang",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-StreamCategoryLang-starter",
+      "stepFunctionName": "${environment}BatchStreamCategoryLangStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamCategoryLang/process_StreamCategoryLang_${date}.json"
+    },
+    {
+      "name": "CriteoCTGPerformance",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-CriteoCTGPerformance-starter",
+      "stepFunctionName": "${environment}BatchCriteoCTGPerformanceStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/CriteoCTGPerformance/process_CriteoCTGPerformance_${date}.json"
+    },
+    {
+      "name": "ForecastCreditScore",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-ForecastCreditScore-starter",
+      "stepFunctionName": "${environment}BatchForecastCreditScoreStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/ForecastCreditScore/process_ForecastCreditScore_${date}.json"
+    },
+    {
+      "name": "EvintChargeratesMain",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-EvintChargeratesMain-starter",
+      "stepFunctionName": "${environment}BatchEvintChargeratesMainStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/EvintChargeratesMain/process_EvintChargeratesMain_${date}.json"
+    },
+    {
+      "name": "AdwordsKeywords",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-AdwordsKeywords-starter",
+      "stepFunctionName": "${environment}BatchAdwordsKeywordsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/AdwordsKeywords/process_AdwordsKeywords_${date}.json"
+    },
+    {
+      "name": "PriceApi",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-PriceApi-starter",
+      "stepFunctionName": "${environment}BatchPriceApiStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/PriceApi/process_PriceApi_${date}.json"
+    },
+    {
+      "name": "VoucherTool",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-VoucherTool-starter",
+      "stepFunctionName": "${environment}BatchVoucherToolStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/VoucherTool/process_VoucherTool_${date}.json"
+    },
+    {
+      "name": "EvintBreakTimes",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-EvintBreakTimes-starter",
+      "stepFunctionName": "${environment}PreProcessEvintBreakTimes",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/EvintBreakTimes/process_EvintBreakTimes_${date}.json"
+    },
+    {
+      "name": "BingConversion",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-BingConversion-starter",
+      "stepFunctionName": "${environment}BatchBingConversionStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/BingConversion/process_BingConversion_${date}.json"
+    },
+    {
+      "name": "CriteoCategoryMaster",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-CriteoCategoryMaster-starter",
+      "stepFunctionName": "${environment}BatchCriteoCategoryMasterStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/CriteoCategoryMaster/process_CriteoCategoryMaster_${date}.json"
+    },
+    {
+      "name": "SoqueroProduct",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-SoqueroProduct-starter",
+      "stepFunctionName": "${environment}BatchSoqueroProductStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/SoqueroProduct/process_SoqueroProduct_${date}.json"
+    },
+    {
+      "name": "ContactCenterAgentHist",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-ContactCenterAgentHist-starter",
+      "stepFunctionName": "${environment}BatchContactCenterAgentHistStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/ContactCenterAgentHist/process_ContactCenterAgentHist_${date}.json"
+    },
+    {
+      "name": "GoogleAnalyticsLanding",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-GoogleAnalyticsLanding-starter",
+      "stepFunctionName": "${environment}BatchGoogleAnalyticsLandingStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/GoogleAnalyticsLanding/process_GoogleAnalyticsLanding_${date}.json"
+    },
+    {
+      "name": "StreamCustomer",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-StreamCustomer-starter",
+      "stepFunctionName": "${environment}PreProcessStreamCustomer",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamCustomer/process_StreamCustomer_${date}.json"
+    },
+    {
+      "name": "AdjustTracker",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-AdjustTracker-starter",
+      "stepFunctionName": "${environment}BatchAdjustTrackerStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/AdjustTracker/process_AdjustTracker_${date}.json"
+    },
+    {
+      "name": "SurveyGizmoNPSSurvey",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-SurveyGizmoNPSSurvey-starter",
+      "stepFunctionName": "${environment}BatchSurveyGizmoNPSSurveyStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/SurveyGizmoNPSSurvey/process_SurveyGizmoNPSSurvey_${date}.json"
+    },
+    {
+      "name": "EvintProjectTimes",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-EvintProjectTimes-starter",
+      "stepFunctionName": "${environment}PreProcessEvintProjectTimes",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/EvintProjectTimes/process_EvintProjectTimes_${date}.json"
+    },
+    {
+      "name": "StreamContentTreeWithLang",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-StreamContentTreeWithLang-starter",
+      "stepFunctionName": "${environment}BatchStreamContentTreeWithLangStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamContentTreeWithLang/process_StreamContentTreeWithLang_${date}.json"
+    },
+    {
+      "name": "BQSessions",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-BQSessions-starter",
+      "stepFunctionName": "${environment}BatchBQSessionsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/BQSessions/process_BQSessions_${date}.json"
+    },
+    {
+      "name": "StreamOrderV3Dedup",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-fullEMR-StreamOrderV3Dedup-starter",
+      "stepFunctionName": "${environment}PreProcessStreamOrderV3Dedup",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/StreamOrderV3Dedup/process_StreamOrderV3Dedup_${date}.json"
+    },
+    {
+      "name": "EvintAbsences",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-EvintAbsences-starter",
+      "stepFunctionName": "${environment}BatchEvintAbsencesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/EvintAbsences/process_EvintAbsences_${date}.json"
+    },
+    {
+      "name": "SapItemMargin",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-emr-salesEMR-SapItemMargin-starter",
+      "stepFunctionName": "${environment}PreProcessSapItemMargin",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/SapItemMargin/process_SapItemMargin_${date}.json"
+    },
+    {
+      "name": "BQEvents",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-BQEvents-starter",
+      "stepFunctionName": "${environment}BatchBQEventsStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/BQEvents/process_BQEvents_${date}.json"
+    },
+    {
+      "name": "SalesMarginAttributes",
+      "stage": "Preprocessor",
+      "starterLambdaName": "${environment}-Batch-SalesMarginAttributes-starter",
+      "stepFunctionName": "${environment}BatchSalesMarginAttributesStateMachine",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Preprocessor/SalesMarginAttributes/process_SalesMarginAttributes_${date}.json"
+    },
+    {
+      "name": "MktSessionAttr",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktSessionAttr-starter",
+      "stepFunctionName": "${environment}ProcessMktSessionAttr",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktSessionAttr/process_MktSessionAttr_${date}.json"
+    },
+    {
+      "name": "DiscoveryRanking",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-DiscoveryRanking-starter",
+      "stepFunctionName": "${environment}ProcessDiscoveryRanking",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/DiscoveryRanking/process_DiscoveryRanking_${date}.json"
+    },
+    {
+      "name": "NpsCrm",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-NpsCrm-starter",
+      "stepFunctionName": "${environment}ProcessNpsCrm",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/NpsCrm/process_NpsCrm_${date}.json"
+    },
+    {
+      "name": "CrossDeviceMap",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-CrossDeviceMap-starter",
+      "stepFunctionName": "${environment}ProcessCrossDeviceMap",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/CrossDeviceMap/process_CrossDeviceMap_${date}.json"
+    },
+    {
+      "name": "SalesOrderLineConsolid",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-salesEMR-SalesOrderLineConsolid-starter",
+      "stepFunctionName": "${environment}ProcessSalesOrderLineConsolid",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/SalesOrderLineConsolid/process_SalesOrderLineConsolid_${date}.json"
+    },
+    {
+      "name": "MarketingRfmAnalysis",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MarketingRfmAnalysis-starter",
+      "stepFunctionName": "${environment}ProcessMarketingRfmAnalysis",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MarketingRfmAnalysis/process_MarketingRfmAnalysis_${date}.json"
+    },
+    {
+      "name": "MktGeoPerf",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-weeklyEMR-MktGeoPerf-starter",
+      "stepFunctionName": "${environment}ProcessMktGeoPerf",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktGeoPerf/process_MktGeoPerf_${date}.json"
+    },
+    {
+      "name": "SoqueroCostConsolidated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-SoqueroCostConsolidated-starter",
+      "stepFunctionName": "${environment}ProcessSoqueroCostConsolidated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/SoqueroCostConsolidated/process_SoqueroCostConsolidated_${date}.json"
+    },
+    {
+      "name": "MktCostAllocCategory",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktCostAllocCategory-starter",
+      "stepFunctionName": "${environment}ProcessMktCostAllocCategory",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktCostAllocCategory/process_MktCostAllocCategory_${date}.json"
+    },
+    {
+      "name": "AdwordsCostConsolidated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-AdwordsCostConsolidated-starter",
+      "stepFunctionName": "${environment}ProcessAdwordsCostConsolidated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/AdwordsCostConsolidated/process_AdwordsCostConsolidated_${date}.json"
+    },
+    {
+      "name": "MktCostAllocated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktCostAllocated-starter",
+      "stepFunctionName": "${environment}ProcessMktCostAllocated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktCostAllocated/process_MktCostAllocated_${date}.json"
+    },
+    {
+      "name": "MktCostAllocPku",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktCostAllocPku-starter",
+      "stepFunctionName": "${environment}ProcessMktCostAllocPku",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktCostAllocPku/process_MktCostAllocPku_${date}.json"
+    },
+    {
+      "name": "MktCostAllocSku",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktCostAllocSku-starter",
+      "stepFunctionName": "${environment}ProcessMktCostAllocSku",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktCostAllocSku/process_MktCostAllocSku_${date}.json"
+    },
+    {
+      "name": "AwinCostConsolidated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-AwinCostConsolidated-starter",
+      "stepFunctionName": "${environment}ProcessAwinCostConsolidated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/AwinCostConsolidated/process_AwinCostConsolidated_${date}.json"
+    },
+    {
+      "name": "CustomerInformation",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-CustomerInformation-starter",
+      "stepFunctionName": "${environment}ProcessCustomerInformation",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/CustomerInformation/process_CustomerInformation_${date}.json"
+    },
+    {
+      "name": "ManualCostConsolidated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-ManualCostConsolidated-starter",
+      "stepFunctionName": "${environment}ProcessManualCostConsolidated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/ManualCostConsolidated/process_ManualCostConsolidated_${date}.json"
+    },
+    {
+      "name": "MktOrdersConsolidated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktOrdersConsolidated-starter",
+      "stepFunctionName": "${environment}ProcessMktOrdersConsolidated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktOrdersConsolidated/process_MktOrdersConsolidated_${date}.json"
+    },
+    {
+      "name": "MktKeywordPerf",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktKeywordPerf-starter",
+      "stepFunctionName": "${environment}ProcessMktKeywordPerf",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktKeywordPerf/process_MktKeywordPerf_${date}.json"
+    },
+    {
+      "name": "CustomerQualityScore",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-CustomerQualityScore-starter",
+      "stepFunctionName": "${environment}ProcessCustomerQualityScore",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/CustomerQualityScore/process_CustomerQualityScore_${date}.json"
+    },
+    {
+      "name": "NpsResults",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-NpsResults-starter",
+      "stepFunctionName": "${environment}ProcessNpsResults",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/NpsResults/process_NpsResults_${date}.json"
+    },
+    {
+      "name": "SessionsConsolidated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-SessionsConsolidated-starter",
+      "stepFunctionName": "${environment}ProcessSessionsConsolidated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/SessionsConsolidated/process_SessionsConsolidated_${date}.json"
+    },
+    {
+      "name": "CriteoCostConsolidated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-CriteoCostConsolidated-starter",
+      "stepFunctionName": "${environment}ProcessCriteoCostConsolidated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/CriteoCostConsolidated/process_CriteoCostConsolidated_${date}.json"
+    },
+    {
+      "name": "PaybackCostConsolidated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-PaybackCostConsolidated-starter",
+      "stepFunctionName": "${environment}ProcessPaybackCostConsolidated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/PaybackCostConsolidated/process_PaybackCostConsolidated_${date}.json"
+    },
+    {
+      "name": "CustomerJourney",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-CustomerJourney-starter",
+      "stepFunctionName": "${environment}ProcessCustomerJourney",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/CustomerJourney/process_CustomerJourney_${date}.json"
+    },
+    {
+      "name": "MktCostAllocatedL1",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktCostAllocatedL1-starter",
+      "stepFunctionName": "${environment}ProcessMktCostAllocatedL1",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktCostAllocatedL1/process_MktCostAllocatedL1_${date}.json"
+    },
+    {
+      "name": "FacebookCostConsolidated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-FacebookCostConsolidated-starter",
+      "stepFunctionName": "${environment}ProcessFacebookCostConsolidated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/FacebookCostConsolidated/process_FacebookCostConsolidated_${date}.json"
+    },
+    {
+      "name": "IngenCostConsolidated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-IngenCostConsolidated-starter",
+      "stepFunctionName": "${environment}ProcessIngenCostConsolidated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/IngenCostConsolidated/process_IngenCostConsolidated_${date}.json"
+    },
+    {
+      "name": "MktWeeklyCohort",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-weeklyEMR-MktWeeklyCohort-starter",
+      "stepFunctionName": "${environment}ProcessMktWeeklyCohort",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktWeeklyCohort/process_MktWeeklyCohort_${date}.json"
+    },
+    {
+      "name": "CustomerLastSession",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-CustomerLastSession-starter",
+      "stepFunctionName": "${environment}ProcessCustomerLastSession",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/CustomerLastSession/process_CustomerLastSession_${date}.json"
+    },
+    {
+      "name": "FabricSamplesLastOrders",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-FabricSamplesLastOrders-starter",
+      "stepFunctionName": "${environment}ProcessFabricSamplesLastOrders",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/FabricSamplesLastOrders/process_FabricSamplesLastOrders_${date}.json"
+    },
+    {
+      "name": "SalesOrderAgg",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-salesEMR-SalesOrderAgg-starter",
+      "stepFunctionName": "${environment}ProcessSalesOrderAgg",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/SalesOrderAgg/process_SalesOrderAgg_${date}.json"
+    },
+    {
+      "name": "MktAudiencePerf",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktAudiencePerf-starter",
+      "stepFunctionName": "${environment}ProcessMktAudiencePerf",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktAudiencePerf/process_MktAudiencePerf_${date}.json"
+    },
+    {
+      "name": "MktDailyDashbBase",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktDailyDashbBase-starter",
+      "stepFunctionName": "${environment}ProcessMktDailyDashbBase",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktDailyDashbBase/process_MktDailyDashbBase_${date}.json"
+    },
+    {
+      "name": "MktSessionRevenueV2",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktSessionRevenueV2-starter",
+      "stepFunctionName": "${environment}ProcessMktSessionRevenueV2",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktSessionRevenueV2/process_MktSessionRevenueV2_${date}.json"
+    },
+    {
+      "name": "ItemCatalogHistory",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-salesEMR-ItemCatalogHistory-starter",
+      "stepFunctionName": "${environment}ProcessItemCatalogHistory",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/ItemCatalogHistory/process_ItemCatalogHistory_${date}.json"
+    },
+    {
+      "name": "BingCostConsolidated",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-fullEMR-BingCostConsolidated-starter",
+      "stepFunctionName": "${environment}ProcessBingCostConsolidated",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/BingCostConsolidated/process_BingCostConsolidated_${date}.json"
+    },
+    {
+      "name": "SoqueroTransform",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-salesEMR-SoqueroTransform-starter",
+      "stepFunctionName": "${environment}ProcessSoqueroTransform",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/SoqueroTransform/process_SoqueroTransform_${date}.json"
+    },
+    {
+      "name": "SoqueroTransformRerun",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-soqueroEMR-SoqueroTransformRerun-starter",
+      "stepFunctionName": "${environment}ProcessSoqueroTransformRerun",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/SoqueroTransformRerun/process_SoqueroTransformRerun_${date}.json"
+    },
+    {
+      "name": "MktRevenuePdp",
+      "stage": "Process",
+      "starterLambdaName": "${environment}-emr-revenueEMR-MktRevenuePdp-starter",
+      "stepFunctionName": "${environment}ProcessMktRevenuePdp",
+      "markerPath": "s3://dp-${environment}-emr-process-marker/Process/MktRevenuePdp/process_MktRevenuePdp_${date}.json"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<title>Home</title>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>HTML Result</title>
@@ -43,7 +44,7 @@
 
 
 <p><h4>Environment</h4></p>
-<form action="{{ url_for('jobStatus')}}" method="post">
+<form method="post">
 <input class="form-control" type="text" placeholder="env name" name="env_name"></input>
 
 
@@ -52,7 +53,9 @@
 
 <p id = "datalist"></p>
 
-<button class="btn btn-primary" type="submit">Run Job</button>
+<button class="btn btn-primary" type="submit" formaction="{{ url_for('runJob')}}">Run Job</button>
+
+<button class="btn btn-sec" type="submit" formaction="{{ url_for('lastExecution')}}">Check Last Execution</button>
 </form>
 </div>
 
