@@ -6,6 +6,13 @@ app = Flask(__name__)
 jd_file = 'jobDefinitions_v2.json'
 markerFilePath = 'marker.json'
 
+def getAccountId(environment):
+    if environment == "production":
+        return "708984774556"
+    else:
+        return "650967531325"
+
+
 @app.route("/")
 def hello():
     return "Hello World!"
@@ -24,7 +31,7 @@ def runJob():
         sfname = [j["stepFunctionName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
         jobname = [j["starterLambdaName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
     response = client.invoke(FunctionName=jobname)
-    stepfunction_arn = "arn:aws:states:eu-west-1:650967531325:stateMachine:" + sfname
+    stepfunction_arn = "arn:aws:states:eu-west-1:" + getAccountId(env) + ":stateMachine:" + sfname
     url = "https://eu-west-1.console.aws.amazon.com/states/home?region=eu-west-1#/statemachines/view/"+stepfunction_arn
     status = "Success" if response['ResponseMetadata']['HTTPStatusCode']==200 else "Failed"
     jobinfo = {"job" : jobname, "env" : env, "url" : url, "status": status}
@@ -39,7 +46,7 @@ def lastExecution():
         data = json.load(json_file)
         sfname = [j["stepFunctionName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
         jobname = [j["starterLambdaName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
-    stepfunction_arn = "arn:aws:states:eu-west-1:650967531325:stateMachine:" + sfname
+    stepfunction_arn = "arn:aws:states:eu-west-1:" + getAccountId(env)+ ":stateMachine:" + sfname
     url = "https://eu-west-1.console.aws.amazon.com/states/home?region=eu-west-1#/statemachines/view/"+stepfunction_arn
     response = client.list_executions(stateMachineArn=stepfunction_arn)
     jobinfo = {"job" : jobname, "env" : env, "url" : url, "status": response['executions'][0]['status']}
