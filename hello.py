@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect
 import json,boto3
 from datetime import date, timedelta
 app = Flask(__name__)
@@ -59,6 +59,16 @@ def createMarker():
     destination = '/'.join(marker.split("/")[3:])
     s3.meta.client.upload_file(markerFilePath, s3bucket, destination)
     return "Markers Created in %s bucket at the following path %s" % (s3bucket, destination)
+
+@app.route('/lambdafetch', methods=["POST"])
+def fetchLambda():
+    env = request.form.get("env_name")
+    job = request.form.get("job_name")
+    with open(jd_file) as json_file:
+        data = json.load(json_file)
+        jobname = [j["starterLambdaName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
+    lambda_url = "https://eu-west-1.console.aws.amazon.com/lambda/home?region=eu-west-1#/functions/"+jobname
+    return redirect(lambda_url)
 
 @app.route("/livesearch",methods=["POST","GET"])
 def livesearch():
