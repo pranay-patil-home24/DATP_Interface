@@ -3,7 +3,7 @@ import json,boto3
 from datetime import date, timedelta
 app = Flask(__name__)
 
-jd_file = 'jobDefinitions_v2.json'
+jd_file = 'jobDefinitions.json'
 markerFilePath = 'marker.json'
 
 def getAccountId(environment):
@@ -90,4 +90,4 @@ def livesearch():
     with open(jd_file) as json_file:
         data = json.load(json_file)
         output = [{"name" : job['name']} for job in data["jobs"] if searchbox.lower() in job["name"].lower()]
-    return jsonify(output)
+    return jsonify(sorted(output))
