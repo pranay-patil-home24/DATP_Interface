@@ -89,5 +89,5 @@ def livesearch():
     output = []
     with open(jd_file) as json_file:
         data = json.load(json_file)
-        output = [{"name" : job['name']} for job in data["jobs"] if searchbox.lower() in job["name"].lower()]
+        output = [job for job in data["jobs"] if searchbox.lower() in job["name"].lower()]
     return jsonify(sorted(output))

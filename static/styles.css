@@ -1,12 +1,13 @@
 .list-group {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
     height: 500px;
     overflow-y: scroll;
+    width: 100%;
+}
+
+.list-group-item {
+  display: revert;
 }
 
 .highlight {
@@ -14,7 +15,13 @@
 }
 
 .job-name {
-  width: 75%;
+  width: 80%;
+  text-align: left;
+}
+
+.job-stage {
+  width: 20%;
+  text-align: left;
 }
 
 #jobs-table input[type="radio"] {

@@ -27,7 +27,8 @@
                           var data = "";
                           $.each(res,function(index,value){
                               data += "<tr class='list-group-item list-group-item-action' onclick='selectRow(this)'>";
-                              data += "<td class='job-name'><input type='radio' class='form-control' id="+value.name+" name='job_name' value="+value.name+"><label for="+value.name+">"+value.name+"</label></td></tr>";
+                              data += "<td class='job-name'><input type='radio' class='form-control' id="+value.name+" name='job_name' value="+value.name+"><label for="+value.name+">"+value.name+"</label></td>";
+                              data += "<td class='job-stage'>"+value.stage+"</td></tr>";
                           });
                           $("#jobs-table tbody").html(data);
                       }
@@ -57,10 +58,11 @@
 <p><h4>Job</h4></p>
 <input type="text" id="livebox" placeholder="filter"></input>
 
-<div id="table-container" class="list-group">
-  <table id="jobs-table">
-    <thead>
-      <th class="job-name">Job name</th>
+<div id="table-container" class="list-group table">
+  <table id="jobs-table" class="table-stripped">
+    <thead class="thead-light">
+      <th class="job-name">Name</th>
+      <th class="job-stage">Stage</th>
     </thead>
     <tbody>
     </tbody>
