@@ -71,7 +71,9 @@ def createMarker():
     s3bucket = marker.split("/")[2]
     destination = '/'.join(marker.split("/")[3:])
     s3.meta.client.upload_file(markerFilePath, s3bucket, destination)
-    return "Markers Created in %s bucket at the following path %s" % (s3bucket, destination)
+    s3url = "https://s3.console.aws.amazon.com/s3/object/%s?prefix=%s" % (s3bucket, destination)
+    markerinfo = {"job" : jobname, "env" : env, "url" : s3url, "status": "Success"}
+    return render_template("createMarker.html", **markerinfo)
 
 @app.route('/lambdafetch', methods=["POST"])
 def fetchLambda():
