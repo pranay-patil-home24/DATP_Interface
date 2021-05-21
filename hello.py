@@ -44,11 +44,15 @@ def lastExecution():
     jobinfo = {"job" : jobname, "env" : env, "url" : url, "status": response['executions'][0]['status']}
     return render_template("jobstatus.html", **jobinfo)
 
+@app.route('/createMarker', methods=["POST"])
+def createMarker():
+    return "Markers Created"
+
 @app.route("/livesearch",methods=["POST","GET"])
 def livesearch():
     searchbox = request.form.get("text")
     output = []
     with open(jd_file) as json_file:
         data = json.load(json_file)
-        output = [{"name" : job['name']} for job in data["jobs"] if job["name"].startswith(searchbox)]
+        output = [{"name" : job['name']} for job in data["jobs"] if searchbox in job["name"]]
     return jsonify(output)
