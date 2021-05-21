@@ -54,7 +54,10 @@ def lastExecution():
     url = "https://eu-west-1.console.aws.amazon.com/states/home?region=eu-west-1#/statemachines/view/"+stepfunction_arn
     response = client.list_executions(stateMachineArn=stepfunction_arn)
     start = response['executions'][0]['startDate'].strftime('%Y-%m-%d %H:%M:%S')
-    end = response['executions'][0]['stopDate'].strftime('%Y-%m-%d %H:%M:%S')
+    try:
+        end = response['executions'][0]['stopDate'].strftime('%Y-%m-%d %H:%M:%S')
+    except:
+        end = "NA"
     jobinfo = {"job" : jobname, "env" : env, "url" : url, "status": response['executions'][0]['status'], "start": start, "end": end}
     return render_template("jobstatus.html", **jobinfo)
 
