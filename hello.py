@@ -26,6 +26,8 @@ def runJob():
     env = request.form.get("env_name")
     job = request.form.get("job_name")
     client = boto3.client('lambda')
+    start = "NA"
+    end = "NA"
     with open(jd_file) as json_file:
         data = json.load(json_file)
         sfname = [j["stepFunctionName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
@@ -34,7 +36,7 @@ def runJob():
     stepfunction_arn = "arn:aws:states:eu-west-1:" + getAccountId(env) + ":stateMachine:" + sfname
     url = "https://eu-west-1.console.aws.amazon.com/states/home?region=eu-west-1#/statemachines/view/"+stepfunction_arn
     status = "Success" if response['ResponseMetadata']['HTTPStatusCode']==200 else "Failed"
-    jobinfo = {"job" : jobname, "env" : env, "url" : url, "status": status}
+    jobinfo = {"job" : jobname, "env" : env, "url" : url, "status": status, "start": start, "end": end}
     return render_template("jobstatus.html", **jobinfo)
 
 @app.route("/lastExecution/", methods=["POST"])
@@ -42,14 +44,18 @@ def lastExecution():
     env = request.form.get("env_name")
     job = request.form.get("job_name")
     client = boto3.client('stepfunctions')
+    start = "NA"
+    end = "NA"
     with open(jd_file) as json_file:
         data = json.load(json_file)
-        sfname = [j["stepFunctionName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
-        jobname = [j["starterLambdaName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
-    stepfunction_arn = "arn:aws:states:eu-west-1:" + getAccountId(env)+ ":stateMachine:" + sfname
+        sfname = [j["stepFunctionName"] for j in data["jobs"] if j["name"].lower()==job.lower()][0].replace("${environment}",env)
+        jobname = [j["starterLambdaName"] for j in data["jobs"] if j["name"].lower()==job.lower()][0].replace("${environment}",env)
+    stepfunction_arn = "arn:aws:states:eu-west-1:" + getAccountId(env) + ":stateMachine:" + sfname
     url = "https://eu-west-1.console.aws.amazon.com/states/home?region=eu-west-1#/statemachines/view/"+stepfunction_arn
     response = client.list_executions(stateMachineArn=stepfunction_arn)
-    jobinfo = {"job" : jobname, "env" : env, "url" : url, "status": response['executions'][0]['status']}
+    start = response['executions'][0]['startDate'].strftime('%Y-%m-%d %H:%M:%S')
+    end = response['executions'][0]['stopDate'].strftime('%Y-%m-%d %H:%M:%S')
+    jobinfo = {"job" : jobname, "env" : env, "url" : url, "status": response['executions'][0]['status'], "start": start, "end": end}
     return render_template("jobstatus.html", **jobinfo)
 
 @app.route('/createMarker', methods=["POST"])
@@ -84,4 +90,4 @@ def livesearch():
     with open(jd_file) as json_file:
         data = json.load(json_file)
         output = [{"name" : job['name']} for job in data["jobs"] if searchbox.lower() in job["name"].lower()]
-    return jsonify(sorted(output))
+    return jsonify(output)
