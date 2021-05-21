@@ -19,12 +19,12 @@
                       url:"/livesearch",
                       data:{text:term},
                       success:function(res){
-                          var data = "<div class='list-group'>";
+                          var data = "";
                           $.each(res,function(index,value){
-                              data += "<p class='list-group-item list-group-item-action'>"+value.name+"</p>";
+                              data += "<tr class='list-group-item list-group-item-action'>";
+                              data += "<td class='job-name'><input type='radio' class='form-control' id="+value.name+" name='job_name' value="+value.name+"><label for="+value.name+">"+value.name+"</label></td></tr>";
                           });
-                          data += "</div>";
-                          $("#datalist").html(data);
+                          $("#jobs-table tbody").html(data);
                       }
                   });
               }
@@ -41,10 +41,6 @@
 </head>
 <body>
     <div class="container body-content">
-
-
-
-
 <div class="container">
 
 
@@ -54,17 +50,23 @@
 
 
 <p><h4>Choose Job</h4></p>
-<input type="text" id="livebox" placeholder="job name" class="form-control" name="job_name"></input>
+<input type="text" id="livebox" placeholder="job name"></input>
 
-<p id = "datalist"></p>
+<div id="table-container" class="list-group">
+  <table id="jobs-table">
+    <thead>
+      <th class="job-name">Job name</th>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
 
 <button class="btn btn-primary" type="submit" formaction="{{ url_for('runJob')}}">Run Job</button>
 
 <button class="btn btn-sec" type="submit" formaction="{{ url_for('lastExecution')}}">Check Last Execution</button>
 
 <button type="submit" class="btn btn-sec" formaction="{{ url_for('createMarker')}}">Create Markers</button>
-
-<button type="submit" class="btn btn-sec" formaction="{{ url_for('fetchLambda')}}" formtarget='_blank'>Go to Lambda console</button>
 
 </form>
 </div>

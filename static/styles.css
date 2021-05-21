@@ -8,3 +8,19 @@
     height: 500px;
     overflow-y: scroll;
 }
+
+.highlight {
+  background: #B3B3B3;
+}
+
+.job-name {
+  width: 75%;
+}
+
+#jobs-table input[type="radio"] {
+  display:none;
+}
+
+#jobs-table input[type="radio"]:checked + label {
+  background: #B3B3B3;
+}
