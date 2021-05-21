@@ -4,6 +4,7 @@ from datetime import date, timedelta
 app = Flask(__name__)
 
 jd_file = 'jobDefinitions_v2.json'
+markerFilePath = 'marker.json'
 
 @app.route("/")
 def hello():
@@ -48,13 +49,16 @@ def lastExecution():
 def createMarker():
     env = request.form.get("env_name")
     job = request.form.get("job_name")
-    client = boto3.client('s3')
+    s3 = boto3.resource('s3')
     localdate = (date.today() - timedelta(days=1)).strftime('%Y-%m-%d')
     with open(jd_file) as json_file:
         data = json.load(json_file)
         marker = [j["markerPath"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env).replace("${date}", localdate)
         jobname = [j["starterLambdaName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
-    return "Markers Created"
+    s3bucket = marker.split("/")[2]
+    destination = '/'.join(marker.split("/")[3:])
+    s3.meta.client.upload_file(markerFilePath, s3bucket, destination)
+    return "Markers Created in %s bucket at the following path %s" % (s3bucket, destination)
 
 @app.route("/livesearch",methods=["POST","GET"])
 def livesearch():
