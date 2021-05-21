@@ -63,7 +63,7 @@ def createMarker():
     env = request.form.get("env_name")
     job = request.form.get("job_name")
     s3 = boto3.resource('s3')
-    localdate = (date.today() - timedelta(days=1)).strftime('%Y-%m-%d')
+    localdate = request.form.get("date_range")
     with open(jd_file) as json_file:
         data = json.load(json_file)
         marker = [j["markerPath"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env).replace("${date}", localdate)
@@ -71,7 +71,9 @@ def createMarker():
     s3bucket = marker.split("/")[2]
     destination = '/'.join(marker.split("/")[3:])
     s3.meta.client.upload_file(markerFilePath, s3bucket, destination)
-    return "Markers Created in %s bucket at the following path %s" % (s3bucket, destination)
+    s3url = "https://s3.console.aws.amazon.com/s3/object/%s?prefix=%s" % (s3bucket, destination)
+    markerinfo = {"job" : jobname, "env" : env, "url" : s3url, "status": "Success"}
+    return render_template("createMarker.html", **markerinfo)
 
 @app.route('/lambdafetch', methods=["POST"])
 def fetchLambda():
