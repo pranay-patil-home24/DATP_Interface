@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import json,boto3
+from datetime import date, timedelta
 app = Flask(__name__)
 
 jd_file = 'jobDefinitions_v2.json'
@@ -21,7 +22,6 @@ def runJob():
         data = json.load(json_file)
         sfname = [j["stepFunctionName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
         jobname = [j["starterLambdaName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
-#    response = client.get_function_configuration(FunctionName=jname.replace("${environment}",env))['Environment']['Variables']['H24_STEPFUNCTION_ARN']
     response = client.invoke(FunctionName=jobname)
     stepfunction_arn = "arn:aws:states:eu-west-1:650967531325:stateMachine:" + sfname
     url = "https://eu-west-1.console.aws.amazon.com/states/home?region=eu-west-1#/statemachines/view/"+stepfunction_arn
@@ -46,6 +46,14 @@ def lastExecution():
 
 @app.route('/createMarker', methods=["POST"])
 def createMarker():
+    env = request.form.get("env_name")
+    job = request.form.get("job_name")
+    client = boto3.client('s3')
+    localdate = (date.today() - timedelta(days=1)).strftime('%Y-%m-%d')
+    with open(jd_file) as json_file:
+        data = json.load(json_file)
+        marker = [j["markerPath"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env).replace("${date}", localdate)
+        jobname = [j["starterLambdaName"] for j in data["jobs"] if j["name"]==job][0].replace("${environment}",env)
     return "Markers Created"
 
 @app.route("/livesearch",methods=["POST","GET"])
@@ -54,5 +62,5 @@ def livesearch():
     output = []
     with open(jd_file) as json_file:
         data = json.load(json_file)
-        output = [{"name" : job['name']} for job in data["jobs"] if searchbox in job["name"]]
+        output = [{"name" : job['name']} for job in data["jobs"] if searchbox.lower() in job["name"].lower()]
     return jsonify(output)
