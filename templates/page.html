@@ -8,25 +8,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
           integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
+<link rel="stylesheet" type="text/css" href="static/styles.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
           <script>
+              function search(term) {
+                  $.ajax({
+                      method:"post",
+                      url:"/livesearch",
+                      data:{text:term},
+                      success:function(res){
+                          var data = "<div class='list-group'>";
+                          $.each(res,function(index,value){
+                              data += "<p class='list-group-item list-group-item-action'>"+value.name+"</p>";
+                          });
+                          data += "</div>";
+                          $("#datalist").html(data);
+                      }
+                  });
+              }
               $(document).ready(function(){
+                  search("");
                   $("#livebox").on("input",function(e){
-                      $("#datalist").empty();
-                      $.ajax({
-                          method:"post",
-                          url:"/livesearch",
-                          data:{text:$("#livebox").val()},
-                          success:function(res){
-                              var data = "<div class='list-group'>";
-                              $.each(res,function(index,value){
-                                  data += "<p class='list-group-item list-group-item-action'>"+value.name+"</p>";
-                              });
-                              data += "</div>";
-                              $("#datalist").html(data);
-                          }
-                      });
+                    search($("#livebox").val());
                   });
               });
           </script>
