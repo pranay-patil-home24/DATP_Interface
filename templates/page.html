@@ -13,6 +13,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
           <script>
+              function selectRow(element) {
+                $('.list-group-item').removeClass('highlight');
+                element.firstElementChild.firstElementChild.checked = true; // TODO improve this
+                element.classList.add("highlight");
+              }
               function search(term) {
                   $.ajax({
                       method:"post",
@@ -21,7 +26,7 @@
                       success:function(res){
                           var data = "";
                           $.each(res,function(index,value){
-                              data += "<tr class='list-group-item list-group-item-action'>";
+                              data += "<tr class='list-group-item list-group-item-action' onclick='selectRow(this)'>";
                               data += "<td class='job-name'><input type='radio' class='form-control' id="+value.name+" name='job_name' value="+value.name+"><label for="+value.name+">"+value.name+"</label></td></tr>";
                           });
                           $("#jobs-table tbody").html(data);
@@ -49,8 +54,8 @@
 <input class="form-control" type="text" placeholder="env name" name="env_name"></input>
 
 
-<p><h4>Choose Job</h4></p>
-<input type="text" id="livebox" placeholder="job name" name="job_name"></input>
+<p><h4>Job</h4></p>
+<input type="text" id="livebox" placeholder="filter"></input>
 
 <div id="table-container" class="list-group">
   <table id="jobs-table">

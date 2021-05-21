@@ -20,7 +20,3 @@
 #jobs-table input[type="radio"] {
   display:none;
 }
-
-#jobs-table input[type="radio"]:checked + label {
-  background: #B3B3B3;
-}
